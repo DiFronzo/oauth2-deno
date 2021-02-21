@@ -1,10 +1,19 @@
+.wikipass
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
+*pyc
+.mypy_cache
 
 # C extensions
 *.so
+
+# General
+.DS_Store
+.AppleDouble
+.LSOverride
 
 # Distribution / packaging
 .Python
