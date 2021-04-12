@@ -396,7 +396,7 @@ export class AuthorizationCodeGrant {
             headers: head,
             body: formdata
         });
-        console.log(response.status)
+        
         if (response.status !== 200) {
             return {}
         }
