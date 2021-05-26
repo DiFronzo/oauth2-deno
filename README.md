@@ -64,7 +64,7 @@ router.get("/api/callback", async (context) => {
 ```ts
 import { Router } from 'https://deno.land/x/oak@v6.5.0/mod.ts';
 import { AuthorizationCodeGrant } from 'https://raw.githubusercontent.com/DiFronzo/oauth2-deno/main/mod.ts';
-import { create } from "https://deno.land/x/pkce_deno@v1.1/mod.ts"; // If you need PKCE
+import { create } from "https://deno.land/x/pkce_deno@v2.0/mod.ts"; // If you need PKCE
 
 const router = new Router();
 
