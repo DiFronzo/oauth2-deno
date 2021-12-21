@@ -387,9 +387,9 @@ export class AuthorizationCodeGrant {
         // console.log(head)
         // console.log("---------------DEBUG requestToken------------------")
         // console.log(this.options.tokenEndpointURI);
-        for (let pair of formdata.entries()) {
-            console.log(pair[0]+ ': ' + pair[1]);
-        }
+        // for (let pair of formdata.entries()) {
+        //     console.log(pair[0]+ ': ' + pair[1]);
+        // }
 
         const response = await fetch(this.options.tokenEndpointURI, {
             method: "POST",
