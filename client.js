@@ -277,10 +277,10 @@ export class AuthorizationCodeGrant {
     parseAuthorizationResponse(redirectionURI, state) {
         const parameters = redirectionURI.searchParams;
         if (state && !parameters.has("state")) {
-            // @todo
+            throw new InvalidRequest("State parameter is missing from the authorization response");
         }
         if (state && parameters.get("state") !== state) {
-            // @todo
+            throw new InvalidRequest("State parameter does not match the expected value");
         }
         const error = parameters.get("error");
         if (error !== null) {
@@ -303,9 +303,9 @@ export class AuthorizationCodeGrant {
             }
         }
         if (!parameters.has("code")) {
-            // @todo
+            throw new InvalidRequest("Authorization code is missing from the authorization response");
         }
-        // return parameters;
+        return parameters.get("code");
     }
 
     /**
